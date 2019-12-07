@@ -150,6 +150,55 @@ class TestProgram(unittest.TestCase):
         wynik = kalkulator.div(-5,3)
         self.assertEqual(wynik, -5/3)
 
+    def test_sqr_1(self):
+        wynik = kalkulator.sqr(5)
+        self.assertEqual(wynik, 25)
+
+    def test_sqr_2(self):
+        wynik = kalkulator.sqr(-5)
+        self.assertEqual(wynik, 25)
+
+    def test_sqr_3(self):
+        wynik = kalkulator.sqr(0)
+        self.assertEqual(wynik, 0)
+
+    def test_sqr_4(self):
+        wynik = kalkulator.sqr(1)
+        self.assertEqual(wynik, 1)
+
+    def test_sqr_5(self):
+        wynik = kalkulator.sqr(1.25)
+        self.assertEqual(wynik, 1.5625)
+
+    def test_sqr_6(self):
+        wynik = kalkulator.sqr('a')
+        self.assertEqual(wynik, False)
+
+    def test_sqrt_1(self):
+        wynik = kalkulator.sqrt(25)
+        self.assertEqual(wynik, 5)
+
+    def test_sqrt_2(self):
+        wynik = kalkulator.sqrt(-1)
+        self.assertEqual(wynik, False)
+
+    def test_sqrt_3(self):
+        wynik = kalkulator.sqrt(0)
+        self.assertEqual(wynik, 0)
+
+    def test_sqrt_4(self):
+        wynik = kalkulator.sqrt(1)
+        self.assertEqual(wynik, 1)
+
+    def test_sqrt_5(self):
+        wynik = kalkulator.sqrt(9)
+        self.assertEqual(wynik, 3)
+
+    def test_sqrt_6(self):
+        wynik = kalkulator.sqrt('a')
+        self.assertEqual(wynik, False)
+
+
 
 if __name__ == '__main__':
     unittest.main()
